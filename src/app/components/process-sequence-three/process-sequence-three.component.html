@@ -1,0 +1,18 @@
+<h3>Process flow THREE!</h3>
+
+@if(idx < processes.length){
+  <app-step-view
+    [(count)]="idx"
+    [title]="processes[idx].title"
+    [description]="processes[idx].description"
+    [templateToUse]="templateForProcessSeqThree"
+    [componentToUse]="selectTemplate(idx)"
+  ></app-step-view>
+} @else {
+    <h3>Process flow completed!</h3>
+    <p>Go back to the <a routerLink="/home" (click)="processCompleted()">Home</a> page</p>
+}
+
+<ng-template #templateForProcessSeqThree>
+  <div>Template for process Three Throughout execution</div>
+</ng-template>

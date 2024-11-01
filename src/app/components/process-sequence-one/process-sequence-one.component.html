@@ -1,0 +1,29 @@
+<h3>Process flow ONE!</h3>
+
+@if(idx < processes.length){
+<app-step-view
+  [(count)]="idx"
+  [title]="processes[idx].title"
+  [description]="processes[idx].description"
+  [templateToUse]="(idx === 0) ? templateOneA : (idx === 1) ? templateOneB : templateOneC"
+  [componentToUse]=""
+></app-step-view>
+} @else {
+<h3>Process flow completed!</h3>
+<p>
+  Go back to the
+  <a routerLink="/home" (click)="processCompleted()">Home</a> page
+</p>
+}
+
+<ng-template #templateOneA>
+  <div>Template for process ONE Alpha Content</div>
+</ng-template>
+
+<ng-template #templateOneB>
+  <div>Template for process ONE Bravo Content</div>
+</ng-template>
+
+<ng-template #templateOneC>
+  <div>Template for process ONE Charlie Content</div>
+</ng-template>

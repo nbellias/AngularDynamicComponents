@@ -1,5 +1,16 @@
 <div>
   <h3>{{ title }}</h3>
   <p>{{ description }}</p>
+  <hr>
+  <p>TEMPLATE</p>
+  @if(templateToUse){
+  <ng-container *ngTemplateOutlet="templateToUse"></ng-container>
+  }
+  <hr>
+  <p>COMPONENT</p>
+  @if(componentToUse){
+  <ng-container *ngComponentOutlet="componentToUse; inputs: { count: count }"></ng-container>
+  }
+  <hr>
   <button (click)="execute()">Execute Step</button>
 </div>

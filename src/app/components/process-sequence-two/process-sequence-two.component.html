@@ -1,0 +1,26 @@
+<h3>Process flow TWO!</h3>
+
+@if(count < processes.length){
+    <app-step-view
+      [(count)]="count"
+      [title]="processes[count].title"
+      [description]="processes[count].description"
+      [templateToUse]="(count === 0) ? templateTwoA : (count === 1) ? templateTwoB : (count === 2) ? templateTwoC : null"
+      [componentToUse]="selectTemplate(count)"
+    ></app-step-view>
+  } @else {
+      <h3>Process flow completed!</h3>
+      <p>Go back to the <a routerLink="/home" (click)="processCompleted()">Home</a> page</p>
+  }
+  
+  <ng-template #templateTwoA>
+    <div>Template for process TWO Alpha Content</div>
+  </ng-template>
+  
+  <ng-template #templateTwoB>
+    <div>Template for process TWO Bravo Content</div>
+  </ng-template>
+  
+  <ng-template #templateTwoC>
+    <div>Template for process TWO Charlie Content</div>
+  </ng-template>
