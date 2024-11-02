@@ -1,0 +1,17 @@
+<p>Products in the form of a reference</p>
+
+<button (click)="viewEachItem()">Rotate through product list</button>
+
+<app-child-view
+  [item]="currentItem"
+  #productViewTemplate
+></app-child-view>
+<p>
+  <button (click)="productViewTemplate.someMethod()">Call Method</button>
+</p>
+
+<br />
+<p>
+  Go back to the
+  <a routerLink="/home">Home</a> page
+</p>

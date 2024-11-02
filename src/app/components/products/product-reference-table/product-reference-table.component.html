@@ -1,0 +1,17 @@
+<p>Products in the form of a reference table</p>
+
+<app-child-view
+  [items]="items"
+  #productViewTableTemplate
+></app-child-view>
+<p>
+  <button (click)="productViewTableTemplate.someMethod()">Call Method</button>
+</p>
+
+<br />
+<p>
+  Go back to the
+  <a routerLink="/home">Home</a> page
+</p>
+
+

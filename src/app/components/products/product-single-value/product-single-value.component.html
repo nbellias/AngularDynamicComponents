@@ -1,0 +1,12 @@
+<p>Products in the form of a single value</p>
+
+<button (click)="viewEachItem()">Rotate through product list</button>
+<p>
+  Current product: {{ currentItem.name }} | Price: {{ currentItem.price | currency
+  }} | Description: {{ currentItem.description }}
+</p>
+<br />
+<p>
+  Go back to the
+  <a routerLink="/home">Home</a> page
+</p>

@@ -1,0 +1,37 @@
+<p>Products in the form of a table</p>
+
+<table>
+    <caption>
+      Products
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for(item of items; track item) {
+      <tr>
+        <th scope="row">{{ item.name }}</th>
+        <td>{{ item.price | currency }}</td>
+        <td>{{ item.description }}</td>
+      </tr>
+    }
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Total amount</th>
+        <td>{{ getPriceSum() | currency }}</td>
+      </tr>
+    </tfoot>
+  </table>
+  
+
+<br />
+<p>
+  Go back to the
+  <a routerLink="/home">Home</a> page
+</p>
+
