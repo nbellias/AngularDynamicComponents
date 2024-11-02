@@ -13,6 +13,10 @@ export class ProductSingleValueComponent {
   @Input() items!: any;
   currentItem: any;
 
+  ngOnInit() {
+    this.currentItem = this.items[0];
+  }
+
   viewEachItem(): any {
     // Rotate through each item in the list.
     // If the rotation reaches the end, start over.
