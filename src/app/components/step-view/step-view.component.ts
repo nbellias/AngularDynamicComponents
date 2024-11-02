@@ -13,6 +13,7 @@ export class StepViewComponent {
   @Input() title!: string;
   @Input() description!: string;
   @Input() templateToUse: any;
+  @Input() templateContext: any;
   @Input() componentToUse: any;
 
   @Output() countChange = new EventEmitter<number>();

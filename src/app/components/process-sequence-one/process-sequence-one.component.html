@@ -6,6 +6,7 @@
   [title]="processes[idx].title"
   [description]="processes[idx].description"
   [templateToUse]="(idx === 0) ? templateOneA : (idx === 1) ? templateOneB : templateOneC"
+  [templateContext]="processes[idx].templateContext"
   [componentToUse]=""
 ></app-step-view>
 } @else {
@@ -16,14 +17,17 @@
 </p>
 }
 
-<ng-template #templateOneA>
+<ng-template #templateOneA let-message="message">
   <div>Template for process ONE Alpha Content</div>
+  <p>{{ message }}</p>
 </ng-template>
 
-<ng-template #templateOneB>
+<ng-template #templateOneB let-message="message">
   <div>Template for process ONE Bravo Content</div>
+  <p>{{ message }}</p>
 </ng-template>
 
-<ng-template #templateOneC>
+<ng-template #templateOneC let-message="message">
   <div>Template for process ONE Charlie Content</div>
+  <p>{{ message }}</p>
 </ng-template>

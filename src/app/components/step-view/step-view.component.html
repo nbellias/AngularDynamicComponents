@@ -4,7 +4,7 @@
   <hr>
   <p>TEMPLATE</p>
   @if(templateToUse){
-  <ng-container *ngTemplateOutlet="templateToUse"></ng-container>
+  <ng-container *ngTemplateOutlet="templateToUse; context: templateContext"></ng-container>
   }
   <hr>
   <p>COMPONENT</p>

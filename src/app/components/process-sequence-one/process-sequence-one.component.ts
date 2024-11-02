@@ -13,15 +13,18 @@ export class ProcessSequenceOneComponent {
   processes = [
     {
       title: 'Step 11',
-      description: 'This is the first step in process ONE.'
+      description: 'This is the first step in process ONE.',
+      templateContext: { message: 'This is the context for the first step in process ONE.' }
     },
     {
       title: 'Step 12',
-      description: 'This is the second step in process ONE.'
+      description: 'This is the second step in process ONE.',
+      templateContext: { message: 'This is the context for the second step in process ONE.' }
     },
     {
       title: 'Step 13',
-      description: 'This is the third step in process ONE.'
+      description: 'This is the third step in process ONE.',
+      templateContext: { message: 'This is the context for the third step in process ONE.' }
     }
   ];
   idx = 0;
