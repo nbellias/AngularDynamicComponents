@@ -1,0 +1,15 @@
+<p>Products in the form of a list</p>
+
+<ul>
+  @for(item of items; track item) {
+  <li>
+    Name: {{ item.name }} | Price: {{ item.price | currency }} | Description:
+    {{ item.description }}
+  </li>
+  }
+</ul>
+<br />
+<p>
+  Go back to the
+  <a routerLink="/home">Home</a> page
+</p>

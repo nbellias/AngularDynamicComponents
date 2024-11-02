@@ -4,8 +4,13 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ProcessSequenceOneComponent } from './components/process-sequence-one/process-sequence-one.component';
 import { ProcessSequenceTwoComponent } from './components/process-sequence-two/process-sequence-two.component';
 import { ProcessSequenceThreeComponent } from './components/process-sequence-three/process-sequence-three.component';
+import { ProductsComponent } from './components/products/products.component';
 
 export const routes: Routes = [
+    {
+        path: 'products',
+        component: ProductsComponent
+    },
     {
         path: 'processone',
         component: ProcessSequenceOneComponent
